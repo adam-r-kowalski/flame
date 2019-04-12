@@ -1,7 +1,19 @@
 [
 {
   "directory": "/Users/adamkowalski/src/flame/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/main.cc.o -c /Users/adamkowalski/src/flame/src/main.cc",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -I../lib/pybind11/include -I/Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/main.cc.o -c /Users/adamkowalski/src/flame/src/main.cc",
   "file": "/Users/adamkowalski/src/flame/src/main.cc"
+},
+
+{
+  "directory": "/Users/adamkowalski/src/flame/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -I../lib/pybind11/include -I/Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/convert.cc.o -c /Users/adamkowalski/src/flame/src/convert.cc",
+  "file": "/Users/adamkowalski/src/flame/src/convert.cc"
+},
+
+{
+  "directory": "/Users/adamkowalski/src/flame/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -I../lib/pybind11/include -I/Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/gym.cc.o -c /Users/adamkowalski/src/flame/src/gym.cc",
+  "file": "/Users/adamkowalski/src/flame/src/gym.cc"
 }
 ]
