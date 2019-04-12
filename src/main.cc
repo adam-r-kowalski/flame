@@ -1,22 +1,23 @@
-#include <pybind11/embed.h>
-#include <pybind11/numpy.h>
-#include <torch/torch.h>
-
-#include <convert.hh>
-
-namespace py = pybind11;
-
-using namespace py::literals;
+#include <flame.hh>
 
 auto main() -> int {
-  const auto interpreter = py::scoped_interpreter{};
-  const auto gym = py::module::import("gym");
-  const auto env = gym.attr("make")("CartPole-v0");
+  const auto interpreter = std::make_shared<pybind11::scoped_interpreter>();
+  const auto gym = flame::gym::Gym{interpreter};
+  auto env = gym.make("CartPole-v0");
 
-  const auto state =
-      flame::convert<torch::Tensor>(py::array(env.attr("reset")()));
+  std::cout << "action_space = " << env.action_space().n << "\n";
 
-  std::cout << state;
+  auto done = false;
+  auto reward = 0.0;
+  auto state = env.reset();
+  while (!done) {
+    const auto [state_, reward_, done_] = env.step(1);
+    reward += reward_;
+    done = done_;
+    state = std::move(state_);
+  }
+
+  std::cout << "reward = " << reward << "\n";
 
   return 0;
 }
