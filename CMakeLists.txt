@@ -7,10 +7,16 @@ project(flame)
 
 find_package(Torch REQUIRED)
 
-add_executable(flame src/main.cc)
+add_subdirectory(lib/pybind11)
+
+add_executable(flame
+  src/main.cc
+  src/convert.cc
+  src/gym.cc)
 
 target_include_directories(flame PRIVATE include)
 
+target_link_libraries(flame PRIVATE pybind11::embed)
 target_link_libraries(flame PRIVATE ${TORCH_LIBRARIES})
 
 target_compile_features(flame PRIVATE cxx_std_17)
