@@ -24,6 +24,7 @@ private:
 };
 
 struct Discrete;
+struct Box;
 
 struct Environment {
   using State = torch::Tensor;
@@ -33,6 +34,7 @@ struct Environment {
   auto reset() -> State;
   auto step(const Action &action) -> std::tuple<State, Reward, bool>;
   auto action_space() const -> Discrete;
+  auto observation_space() const -> Box;
 
 private:
   explicit Environment(py::object &&environment);
@@ -41,11 +43,20 @@ private:
 };
 
 struct Discrete {
-  int n;
+  const int n;
 
 private:
   explicit Discrete(py::object &&env);
   py::object discrete_;
+  friend struct Environment;
+};
+
+struct Box {
+  const torch::Tensor shape;
+
+private:
+  explicit Box(py::object &&env);
+  py::object box_;
   friend struct Environment;
 };
 

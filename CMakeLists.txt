@@ -12,7 +12,8 @@ add_subdirectory(lib/pybind11)
 add_executable(flame
   src/main.cc
   src/convert.cc
-  src/gym.cc)
+  src/gym.cc
+  src/agent/random.cc)
 
 target_include_directories(flame PRIVATE include)
 

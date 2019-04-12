@@ -31,8 +31,16 @@ auto Environment::action_space() const -> Discrete {
   return Discrete{environment_.attr("action_space")};
 }
 
+auto Environment::observation_space() const -> Box {
+  return Box{environment_.attr("observation_space")};
+}
+
 Discrete::Discrete(py::object &&discrete)
     : n{py::cast<int>(discrete.attr("n"))}, discrete_{std::move(discrete)} {}
+
+Box::Box(py::object &&box)
+    : shape{convert<torch::Tensor>(py::array(box.attr("shape")))},
+      box_{std::move(box)} {}
 
 } // namespace v0
 } // namespace gym
