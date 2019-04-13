@@ -13,7 +13,8 @@ add_executable(flame
   src/main.cc
   src/convert.cc
   src/gym.cc
-  src/agent/random.cc)
+  src/agent/random.cc
+  src/agent/policy_gradient.cc)
 
 target_include_directories(flame PRIVATE include)
 

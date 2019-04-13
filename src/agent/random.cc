@@ -12,6 +12,8 @@ auto Random::operator()(const State &state) -> Action {
 
 auto Random::remember(Experience experience) -> void {}
 
+auto Random::on_episode_end(int episode, Reward reward) -> void {}
+
 } // namespace v0
 } // namespace agent
 } // namespace flame

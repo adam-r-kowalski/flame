@@ -1,5 +1,6 @@
 #pragma once
 
+#include <agent/policy_gradient.hh>
 #include <agent/random.hh>
 #include <convert.hh>
 #include <gym.hh>
@@ -24,15 +25,18 @@ auto run_simulation(gym::Environment &environment, Agent &agent, int episodes)
   for (int episode = 0; episode < episodes; ++episode) {
     auto done = false;
     auto state = environment.reset();
+    auto episode_reward = zero<Reward>();
     while (!done) {
       const auto action = agent(state);
       const auto [next_state, reward, is_done] = environment.step(action);
-      total_reward += reward;
+      episode_reward += reward;
       done = is_done;
       agent.remember(
           std::make_tuple(std::move(state), action, reward, next_state));
       state = std::move(next_state);
     }
+    agent.on_episode_end(episode, episode_reward);
+    total_reward += episode_reward;
   }
   return total_reward / episodes;
 }
