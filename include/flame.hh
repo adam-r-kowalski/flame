@@ -32,6 +32,7 @@ auto run_simulation(gym::Environment &environment, Agent &agent, int episodes,
     while (!done) {
       const auto action = agent(state);
       const auto [next_state, reward, is_done] = environment.step(action);
+      environment.render();
       episode_reward += reward;
       done = is_done;
       agent.remember(

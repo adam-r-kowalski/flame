@@ -5,6 +5,9 @@ using namespace flame::callback;
 
 auto main() -> int {
   const auto interpreter = std::make_shared<pybind11::scoped_interpreter>();
+
+  pybind11::module::import("sys").attr("argv").attr("append")("");
+
   const auto gym = gym::Gym{interpreter};
   const auto tensorboard = Tensorboard{interpreter};
 
@@ -18,8 +21,7 @@ auto main() -> int {
   auto agent = agent::PolicyGradient{observation_space, /*hidden units=*/20,
                                      action_space, /*gamma=*/0.9};
 
-  run_simulation(environment, agent, /*episodes=*/200,
-                 Callbacks{console_logger, TensorboardLogger{tensorboard}});
+  run_simulation(environment, agent, /*episodes=*/1);
 
   return 0;
 }

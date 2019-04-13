@@ -31,10 +31,13 @@ struct Environment {
   using Action = int;
   using Reward = float;
 
+  ~Environment();
+
   auto reset() -> State;
   auto step(const Action &action) -> std::tuple<State, Reward, bool>;
   auto action_space() const -> Discrete;
   auto observation_space() const -> Box;
+  auto render() -> void;
 
 private:
   explicit Environment(py::object &&environment);

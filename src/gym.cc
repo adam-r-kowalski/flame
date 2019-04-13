@@ -15,6 +15,8 @@ auto Gym::make(const std::string_view &name) const -> Environment {
 Environment::Environment(py::object &&environment)
     : environment_{std::move(environment)} {}
 
+Environment::~Environment() { environment_.attr("close")(); }
+
 auto Environment::reset() -> State {
   return convert<torch::Tensor>(py::array(environment_.attr("reset")()));
 }
@@ -34,6 +36,8 @@ auto Environment::action_space() const -> Discrete {
 auto Environment::observation_space() const -> Box {
   return Box{environment_.attr("observation_space")};
 }
+
+auto Environment::render() -> void { environment_.attr("render")(); }
 
 Discrete::Discrete(py::object &&discrete)
     : n{py::cast<int>(discrete.attr("n"))}, discrete_{std::move(discrete)} {}
