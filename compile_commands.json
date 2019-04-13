@@ -19,6 +19,18 @@
 
 {
   "directory": "/Users/adamkowalski/src/flame/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -I../lib/pybind11/include -I/Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/callback.cc.o -c /Users/adamkowalski/src/flame/src/callback.cc",
+  "file": "/Users/adamkowalski/src/flame/src/callback.cc"
+},
+
+{
+  "directory": "/Users/adamkowalski/src/flame/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -I../lib/pybind11/include -I/Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/tensorboard.cc.o -c /Users/adamkowalski/src/flame/src/tensorboard.cc",
+  "file": "/Users/adamkowalski/src/flame/src/tensorboard.cc"
+},
+
+{
+  "directory": "/Users/adamkowalski/src/flame/build",
   "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -I../lib/pybind11/include -I/Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/agent/random.cc.o -c /Users/adamkowalski/src/flame/src/agent/random.cc",
   "file": "/Users/adamkowalski/src/flame/src/agent/random.cc"
 },

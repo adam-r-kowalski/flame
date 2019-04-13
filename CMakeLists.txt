@@ -13,6 +13,8 @@ add_executable(flame
   src/main.cc
   src/convert.cc
   src/gym.cc
+  src/callback.cc
+  src/tensorboard.cc
   src/agent/random.cc
   src/agent/policy_gradient.cc)
 
