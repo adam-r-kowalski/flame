@@ -6,8 +6,7 @@ set(CMAKE_PREFIX_PATH /Users/adamkowalski/pytorch/torch)
 project(flame)
 
 find_package(Torch REQUIRED)
-
-add_subdirectory(lib/pybind11)
+find_package(pybind11 REQUIRED)
 
 add_executable(flame
   src/main.cc
