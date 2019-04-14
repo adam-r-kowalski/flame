@@ -16,14 +16,14 @@ private:
   int dim_;
 };
 
-PolicyGradient::PolicyGradient(int observation_space, int hidden_units,
-                               int action_space, float gamma)
+PolicyGradient::PolicyGradient(PolicyGradientOptions &&options)
     : model_{torch::nn::Sequential(
-          torch::nn::Linear(observation_space, hidden_units),
+          torch::nn::Linear(options.observation_space, options.hidden_units),
           torch::nn::Functional(torch::relu),
-          torch::nn::Linear(hidden_units, action_space), Softmax(/*dim=*/0))},
+          torch::nn::Linear(options.hidden_units, options.action_space),
+          Softmax(/*dim=*/0))},
       optimizer_{torch::optim::Adam{model_->parameters(), /*lr=*/1e-2}},
-      gamma_{gamma} {}
+      gamma_{options.gamma} {}
 
 auto PolicyGradient::operator()(const State &state) -> Action {
   const auto probabilities = model_->forward(state.to(torch::kFloat32));

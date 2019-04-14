@@ -7,14 +7,20 @@ namespace flame {
 namespace agent {
 inline namespace v0 {
 
+struct PolicyGradientOptions {
+  int observation_space;
+  int hidden_units;
+  int action_space;
+  float gamma;
+};
+
 struct PolicyGradient {
   using State = torch::Tensor;
   using Action = int;
   using Reward = float;
   using Experience = std::tuple<State, Action, Reward, State>;
 
-  explicit PolicyGradient(int observation_space, int hidden_units,
-                          int action_space, float gamma);
+  explicit PolicyGradient(PolicyGradientOptions &&options);
 
   auto operator()(const State &state) -> Action;
   auto remember(Experience experience) -> void;

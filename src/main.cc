@@ -10,13 +10,12 @@ auto main() -> int {
 
   auto environment = gym.make("CartPole-v0");
 
-  const auto observation_space =
-      environment.observation_space().shape[0].item<int>();
-
-  const auto action_space = environment.action_space().n;
-
-  auto agent =
-      flame::agent::PolicyGradient{observation_space, 20, action_space, 0.9};
+  auto agent = flame::agent::PolicyGradient{
+      {.observation_space =
+           environment.observation_space().shape[0].item<int>(),
+       .hidden_units = 20,
+       .action_space = environment.action_space().n,
+       .gamma = 0.9}};
 
   flame::Simulation{}.render(true).run(environment, agent);
 
