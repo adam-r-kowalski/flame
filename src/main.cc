@@ -1,10 +1,7 @@
 #include <flame.hh>
 
 auto main() -> int {
-  const auto interpreter = std::make_shared<pybind11::scoped_interpreter>();
-
-  pybind11::module::import("sys").attr("argv").attr("append")("");
-
+  const auto interpreter = flame::python_interpreter();
   const auto gym = flame::gym::Gym{interpreter};
   const auto tensorboard = flame::Tensorboard{interpreter};
 

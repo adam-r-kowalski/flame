@@ -10,6 +10,7 @@ find_package(pybind11 REQUIRED)
 
 add_executable(flame
   src/main.cc
+  src/flame.cc
   src/convert.cc
   src/gym.cc
   src/callback.cc
