@@ -18,14 +18,14 @@ auto main() -> int {
   auto agent =
       flame::agent::PolicyGradient{observation_space, 20, action_space, 0.9};
 
-  flame::Simulation{environment, agent}.render(true).run();
+  flame::Simulation{}.render(true).run(environment, agent);
 
-  flame::Simulation{environment, agent}
-      .episodes(300)
+  flame::Simulation{}
+      .episodes(100)
       .on_episode_end({flame::callback::console_logger})
-      .run();
+      .run(environment, agent);
 
-  flame::Simulation{environment, agent}.render(true).run();
+  flame::Simulation{}.render(true).run(environment, agent);
 
   return 0;
 }

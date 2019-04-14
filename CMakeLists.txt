@@ -14,6 +14,7 @@ add_executable(flame
   src/gym.cc
   src/callback.cc
   src/tensorboard.cc
+  src/simulation.cc
   src/agent/random.cc
   src/agent/policy_gradient.cc)
 

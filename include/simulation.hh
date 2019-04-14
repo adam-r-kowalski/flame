@@ -13,67 +13,44 @@ using State = gym::Environment::State;
 using Action = gym::Environment::Action;
 using Reward = gym::Environment::Reward;
 
-template <class Agent> struct Simulation {
-  explicit Simulation(gym::Environment &environment, Agent &agent);
+struct Simulation {
+  explicit Simulation();
   auto episodes(int episodes) -> Simulation &;
   auto render(bool render) -> Simulation &;
   auto on_episode_end(std::vector<callback::Callback> &&on_episode_end)
       -> Simulation &;
-  auto run() -> void;
+
+  template <class Agent>
+  auto run(gym::Environment &environemnt, Agent &agent) -> void;
 
 private:
-  gym::Environment &environment_;
-  Agent &agent_;
-  int episodes_ = 1;
-  bool render_ = false;
+  int episodes_;
+  bool render_;
   std::vector<callback::Callback> on_episode_end_;
 };
 
 // IMPLEMENTATION
 
 template <class Agent>
-Simulation<Agent>::Simulation(gym::Environment &environment, Agent &agent)
-    : environment_{environment}, agent_{agent} {}
-
-template <class Agent>
-auto Simulation<Agent>::episodes(int episodes) -> Simulation & {
-  episodes_ = episodes;
-  return *this;
-}
-
-template <class Agent>
-auto Simulation<Agent>::render(bool render) -> Simulation & {
-  render_ = render;
-  return *this;
-}
-
-template <class Agent>
-
-auto Simulation<Agent>::on_episode_end(
-    std::vector<callback::Callback> &&on_episode_end) -> Simulation & {
-  on_episode_end_ = std::move(on_episode_end);
-  return *this;
-}
-
-template <class Agent> auto Simulation<Agent>::run() -> void {
+auto Simulation::run(gym::Environment &environment, Agent &agent) -> void {
   for (auto episode = 0; episode < episodes_; ++episode) {
     auto done = false;
-    auto state = environment_.reset();
+    auto state = environment.reset();
     auto episode_reward = zero<Reward>();
     while (!done) {
-      const auto action = agent_(state);
-      const auto [next_state, reward, is_done] = environment_.step(action);
+      const auto action = agent(state);
+      const auto [next_state, reward, is_done] = environment.step(action);
 
       if (render_)
-        environment_.render();
+        environment.render();
 
       episode_reward += reward;
       done = is_done;
-      agent_.remember(
+      agent.remember(
           std::make_tuple(std::move(state), action, reward, next_state));
       state = std::move(next_state);
     }
-    agent_.on_episode_end(episode, episode_reward);
+    agent.on_episode_end(episode, episode_reward);
 
     for (auto &callback : on_episode_end_)
       callback(episode, episode_reward);
