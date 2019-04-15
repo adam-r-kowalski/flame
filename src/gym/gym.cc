@@ -1,5 +1,5 @@
 #include <convert.hh>
-#include <gym.hh>
+#include <gym/gym.hh>
 
 namespace flame {
 namespace gym {

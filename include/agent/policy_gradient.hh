@@ -9,7 +9,6 @@ inline namespace v0 {
 
 struct PolicyGradientOptions {
   int observation_space;
-  int hidden_units;
   int action_space;
   float gamma;
 };

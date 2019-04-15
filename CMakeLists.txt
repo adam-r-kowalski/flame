@@ -12,10 +12,10 @@ add_executable(flame
   src/main.cc
   src/flame.cc
   src/convert.cc
-  src/gym.cc
   src/callback.cc
   src/tensorboard.cc
   src/simulation.cc
+  src/gym/gym.cc
   src/agent/random.cc
   src/agent/policy_gradient.cc)
 

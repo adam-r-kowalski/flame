@@ -4,7 +4,8 @@
 #include <agent/random.hh>
 #include <callback.hh>
 #include <convert.hh>
-#include <gym.hh>
+#include <gym/gym.hh>
+#include <gym/wrappers/stack_history.hh>
 #include <simulation.hh>
 #include <tensorboard.hh>
 #include <unit.hh>

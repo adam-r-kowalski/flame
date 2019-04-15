@@ -30,13 +30,15 @@ struct Environment {
   using State = torch::Tensor;
   using Action = int;
   using Reward = float;
+  using ActionSpace = Discrete;
+  using ObservationSpace = Box;
 
   ~Environment();
 
   auto reset() -> State;
   auto step(const Action &action) -> std::tuple<State, Reward, bool>;
-  auto action_space() const -> Discrete;
-  auto observation_space() const -> Box;
+  auto action_space() const -> ActionSpace;
+  auto observation_space() const -> ObservationSpace;
   auto render() -> void;
 
 private:

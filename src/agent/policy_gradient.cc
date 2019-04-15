@@ -18,10 +18,9 @@ private:
 
 PolicyGradient::PolicyGradient(PolicyGradientOptions &&options)
     : model_{torch::nn::Sequential(
-          torch::nn::Linear(options.observation_space, options.hidden_units),
+          torch::nn::Linear(options.observation_space, 20),
           torch::nn::Functional(torch::relu),
-          torch::nn::Linear(options.hidden_units, options.action_space),
-          Softmax(/*dim=*/0))},
+          torch::nn::Linear(20, options.action_space), Softmax(/*dim=*/0))},
       optimizer_{torch::optim::Adam{model_->parameters(), /*lr=*/1e-2}},
       gamma_{options.gamma} {}
 

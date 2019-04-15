@@ -3,7 +3,7 @@
 #include <vector>
 
 #include <callback.hh>
-#include <gym.hh>
+#include <gym/gym.hh>
 #include <unit.hh>
 
 namespace flame {
