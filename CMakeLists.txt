@@ -7,6 +7,8 @@ project(flame)
 
 find_package(Torch REQUIRED)
 find_package(pybind11 REQUIRED)
+find_package(OpenCV REQUIRED)
+find_package(Boost COMPONENTS filesystem REQUIRED)
 
 add_executable(flame
   src/main.cc
@@ -20,8 +22,11 @@ add_executable(flame
   src/agent/policy_gradient.cc)
 
 target_include_directories(flame PRIVATE include)
+target_include_directories(flame PRIVATE ${OpenCV_INCLUDE_DIRS})
 
 target_link_libraries(flame PRIVATE pybind11::embed)
 target_link_libraries(flame PRIVATE ${TORCH_LIBRARIES})
+target_link_libraries(flame PRIVATE ${OpenCV_LIBS})
+target_link_libraries(flame PRIVATE ${Boost_LIBRARIES})
 
 target_compile_features(flame PRIVATE cxx_std_17)

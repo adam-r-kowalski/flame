@@ -1,55 +1,55 @@
 [
 {
   "directory": "/Users/adamkowalski/src/flame/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/main.cc.o -c /Users/adamkowalski/src/flame/src/main.cc",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /usr/local/include/opencv4 -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/main.cc.o -c /Users/adamkowalski/src/flame/src/main.cc",
   "file": "/Users/adamkowalski/src/flame/src/main.cc"
 },
 
 {
   "directory": "/Users/adamkowalski/src/flame/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/flame.cc.o -c /Users/adamkowalski/src/flame/src/flame.cc",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /usr/local/include/opencv4 -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/flame.cc.o -c /Users/adamkowalski/src/flame/src/flame.cc",
   "file": "/Users/adamkowalski/src/flame/src/flame.cc"
 },
 
 {
   "directory": "/Users/adamkowalski/src/flame/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/convert.cc.o -c /Users/adamkowalski/src/flame/src/convert.cc",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /usr/local/include/opencv4 -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/convert.cc.o -c /Users/adamkowalski/src/flame/src/convert.cc",
   "file": "/Users/adamkowalski/src/flame/src/convert.cc"
 },
 
 {
   "directory": "/Users/adamkowalski/src/flame/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/callback.cc.o -c /Users/adamkowalski/src/flame/src/callback.cc",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /usr/local/include/opencv4 -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/callback.cc.o -c /Users/adamkowalski/src/flame/src/callback.cc",
   "file": "/Users/adamkowalski/src/flame/src/callback.cc"
 },
 
 {
   "directory": "/Users/adamkowalski/src/flame/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/tensorboard.cc.o -c /Users/adamkowalski/src/flame/src/tensorboard.cc",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /usr/local/include/opencv4 -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/tensorboard.cc.o -c /Users/adamkowalski/src/flame/src/tensorboard.cc",
   "file": "/Users/adamkowalski/src/flame/src/tensorboard.cc"
 },
 
 {
   "directory": "/Users/adamkowalski/src/flame/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/simulation.cc.o -c /Users/adamkowalski/src/flame/src/simulation.cc",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /usr/local/include/opencv4 -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/simulation.cc.o -c /Users/adamkowalski/src/flame/src/simulation.cc",
   "file": "/Users/adamkowalski/src/flame/src/simulation.cc"
 },
 
 {
   "directory": "/Users/adamkowalski/src/flame/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/gym/gym.cc.o -c /Users/adamkowalski/src/flame/src/gym/gym.cc",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /usr/local/include/opencv4 -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/gym/gym.cc.o -c /Users/adamkowalski/src/flame/src/gym/gym.cc",
   "file": "/Users/adamkowalski/src/flame/src/gym/gym.cc"
 },
 
 {
   "directory": "/Users/adamkowalski/src/flame/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/agent/random.cc.o -c /Users/adamkowalski/src/flame/src/agent/random.cc",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /usr/local/include/opencv4 -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/agent/random.cc.o -c /Users/adamkowalski/src/flame/src/agent/random.cc",
   "file": "/Users/adamkowalski/src/flame/src/agent/random.cc"
 },
 
 {
   "directory": "/Users/adamkowalski/src/flame/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/agent/policy_gradient.cc.o -c /Users/adamkowalski/src/flame/src/agent/policy_gradient.cc",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -I../include -isystem /usr/local/include/opencv4 -isystem /Users/adamkowalski/miniconda3/include/python3.7m -isystem /Users/adamkowalski/pytorch/torch/include -isystem /Users/adamkowalski/pytorch/torch/include/torch/csrc/api/include -isystem /usr/local/cuda/include    -std=c++14 -std=c++11 -std=gnu++1z -o CMakeFiles/flame.dir/src/agent/policy_gradient.cc.o -c /Users/adamkowalski/src/flame/src/agent/policy_gradient.cc",
   "file": "/Users/adamkowalski/src/flame/src/agent/policy_gradient.cc"
 }
 ]

@@ -52,5 +52,13 @@ template <> auto convert(py::array numpy) -> torch::Tensor {
                           convert<torch::ScalarType>(numpy.dtype()));
 }
 
+template <> auto convert(cv::Mat mat) -> torch::Tensor {
+  return torch::from_blob(mat.data, {1, mat.rows, mat.cols, 3}, at::kByte);
+}
+
+template <> auto convert(torch::Tensor tensor) -> cv::Mat {
+  return cv::Mat(cv::Size(512, 512), CV_8UC3, tensor.data<uint8_t>());
+}
+
 } // namespace v0
 } // namespace flame
